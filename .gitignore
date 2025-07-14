@@ -1,0 +1,17 @@
+# Rust
+/target/
+**/*.rs.bk
+
+# Node
+node_modules/
+.svelte-kit/
+.next/
+build/
+
+# ICP
+.dfx/
+canister_ids.json
+
+# General
+.DS_Store
+*.log
