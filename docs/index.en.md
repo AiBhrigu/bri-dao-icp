@@ -1,3 +1,5 @@
+[🇷🇺 Читать на русском](index.md)
+
 # 🌌 BRI DAO Starter
 
 🚀 Welcome to **BRI DAO** — a decentralized research platform dedicated to the study of celestial mechanics, time cycles, and probable future scenarios.  
