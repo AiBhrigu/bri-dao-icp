@@ -1,1 +1,4 @@
-<meta http-equiv="refresh" content="0; url=en/" />
+<!--
+[Whitepaper EN](en/)
+[Whitepaper RU](ru/)
+-->
