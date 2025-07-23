@@ -2,12 +2,11 @@
 
 💠 **BRI DAO** — децентрализованный проект на платформе Internet Computer, направленный на развитие астрологических сервисов, предсказательных моделей и Web3-инфраструктуры.
 
-## 📄 Whitepaper
-
+📄 Whitepaper  
 Актуальные версии Белой книги (собираются автоматически через CI/CD):
 
-- [Whitepaper (RU)](https://aibhrigu.github.io/bri-dao-icp/docs/whitepaper.ru.pdf)
-- [Whitepaper (EN)](https://aibhrigu.github.io/bri-dao-icp/docs/whitepaper.en.pdf)
+- [Whitepaper (RU)](https://aibhrigu.github.io/bri-dao-icp/Whitepaper_RU.pdf)
+- [Whitepaper (EN)](https://aibhrigu.github.io/bri-dao-icp/Whitepaper_EN.pdf)
 
 ## 📁 Структура репозитория
 
