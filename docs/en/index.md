@@ -1,10 +1,4 @@
----
-layout: default
-title: BRI DAO — English
-permalink: /en/
----
-
-[🇷🇺 Читать на русском](index.md)
+[🇷🇺 Читать на русском](/ru/)
 
 # 🌌 BRI DAO Starter
 
