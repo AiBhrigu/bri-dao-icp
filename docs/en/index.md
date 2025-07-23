@@ -41,8 +41,9 @@ Of those, **1,427,516,541 BHRIGU (67.98%)** were burned on the Minter network (i
 - Operation of prediction modules  
 - Calculations within the protocol
 
-🔥 **950,000 ORACLES** — burned on Minter (as reserve for BRI)  
-💼 **50,000 ORACLES** — retained on Minter (strategic team reserve)
+🔥 900,000 ORACLES — burned on the Minter network (reserved for the BRI project).
+💼 50,000 ORACLES — remain on the Minter network (strategic team reserve).
+💼 50,000 ORACLES — issued on the TON network (for cross-chain interoperability and liquidity).
 
 ---
 
