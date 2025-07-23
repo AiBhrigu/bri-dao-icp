@@ -1,0 +1,20 @@
+name: 📅 Daily Astro Report
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # каждый день в 02:00 UTC
+  workflow_dispatch:      # запуск вручную
+  push:
+    paths:
+      - 'main.py'
+      - 'utils/**'
+      - '.github/workflows/daily.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: 🪐 Запуск генерации астрологического отчёта
+        run: python3 main.py

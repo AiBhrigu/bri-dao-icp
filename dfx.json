@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "bri_token_backend": {
+      "type": "custom",
+      "candid": "bri-token-backend/bri_token_backend.did",
+      "wasm": "bri-token-backend/bri_token_backend.wasm",
+      "build": "cd bri-token-backend && cargo build --target wasm32-unknown-unknown --release && cp target/wasm32-unknown-unknown/release/bri_token_backend.wasm bri_token_backend.wasm"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

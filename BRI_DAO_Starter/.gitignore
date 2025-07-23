@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/
+
+# Rust
+target/
+
+# OS
+.DS_Store
+
+# Others
+*.log
+*.env
+astro_patterns/
+utils/ephemerides/*.bsp
+utils/data/*.bsp
+utils/ephem_data/de430t.bsp
+utils/ephem_data/de440.bsp
+
+de430t.bsp
+de440.bsp
+de440.bsp.1
+utils/de430t.bsp
+utils/de440.bsp
+utils/de440.bsp.1
+de430t.bsp
+de440.bsp.1

@@ -1,0 +1,7 @@
+service : {
+  mint : (text, nat64) -> ();
+  transfer : (text, text, nat64) -> (bool);
+  balance_of : (text) -> (nat64) query;
+  total_supply : () -> (nat64) query;
+}
+

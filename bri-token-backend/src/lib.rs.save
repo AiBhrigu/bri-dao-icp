@@ -1,0 +1,62 @@
+use serde::{Deserialize, Serialize};
+use candid::{CandidType, Deserialize};
+use ic_cdk_macros::{query, update};
+use std::collections::HashMap;
+use std::cell::RefCell;
+
+#[derive(CandidType, Deserialize)]
+struct Token {
+    balances: RefCell<HashMap<String, u64>>,
+    total_supply: RefCell<u64>,
+}
+
+thread_local! {
+    static TOKEN: Token = Token {
+        balances: RefCell::new(HashMap::new()),
+        total_supply: RefCell::new(0),
+    };
+}
+
+#[update]
+fn mint(to: String, amount: u64) {
+    TOKEN.with(|token| {
+        let mut balances = token.balances.borrow_mut();
+        let mut supply = token.total_supply.borrow_mut();
+        let balance = balances.entry(to).or_insert(0);
+        *balance += amount;
+        *supply += amount;
+    });
+}
+
+#[update]
+fn transfer(from: String, to: String, amount: u64) -> bool {
+    TOKEN.with(|token| {
+        let mut balances = token.balances.borrow_mut();
+        let from_balance = balances.entry(from.clone()).or_insert(0);
+
+        if *from_balance < amount {
+            return false;
+        }
+
+        *from_balance -= amount;
+        let to_balance = balances.entry(to).or_insert(0);
+        *to_balance += amount;
+
+        true
+    })
+}
+
+#[query]
+fn balance_of(owner: String) -> u64 {
+    TOKEN.with(|token| {
+        let balances = token.balances.borrow();
+        *balances.get(&owner).unwrap_or(&0)
+    })
+}
+
+#[query]
+fn total_supply() -> u64 {
+    TOKEN.with(|token| *token.total_supply.borrow())
+}
+
+candid::export_service!();
